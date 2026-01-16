@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +16,49 @@
             line-height: 1.6;
         }
 
-        header 10px;
+        /* ---- TOP NAVIGATION BAR ---- */
+        nav {
+            width: 100%;
+            background-color: #11161d;
+            border-bottom: 1px solid #30363d;
+            padding: 12px 20px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: #58a6ff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background-color: #1f2630;
+            border-color: #58a6ff;
+        }
+
+        /* ---- HEADER ---- */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header img {
+            width: 180px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
             color: #58a6ff;
         }
 
@@ -52,10 +95,15 @@
 </head>
 <body>
 
+<!-- TOP NAVIGATION BAR -->
+<nav>
+    Hardware/Hardware</a>
+    Software/Software</a>
+    <a href="Buildsa>
+</nav>
+
 <header>
-    logo.png
-    <h1>JetController</h1>
-    <p>An open‑source smart controller platform for RC planes (ESP32‑C3).</p>
+    <img src="logo.png" alt="JetController LogoAn open‑source smart controller platform for RC planes (ESP32‑C3).</p>
 </header>
 
 <section>
@@ -97,7 +145,7 @@
 
     <h2>License</h2>
     <p>
-        This project is released under <strong>GPL‑3.0</strong>.  
+        This project is released under <strong>GPL‑3.0</strong>.<br>
         All derived work must remain open‑source.
     </p>
 </section>
