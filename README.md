@@ -1,143 +1,110 @@
-# JetController
-An open‑source smart controller platform for RC planes (ESP32‑C3)
-License: GPL‑3.0
-JetController is an open‑source hardware and software project designed for RC planes, offering flexible PWM control, high‑power lighting, servo sequencing, and smart LED effects — all built on the ESP32‑C3 platform.
-The project includes hardware schematics, PCB layout, Arduino‑based firmware, and 3D‑printable parts (housing, EDF afterburner adapters).
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JetController – Open Source RC Plane Controller</title>
 
-✨ Features
-🔧 Input Capabilities
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0d1117;
+            color: #e6edf3;
+            line-height: 1.6;
+        }
 
-2× Fully‑configurable PWM inputs
-For throttle, gear switch, flaps, or general‑purpose channel mapping.
+        header 10px;
+            color: #58a6ff;
+        }
 
-⚡ Power System
+        h2 {
+            margin-top: 40px;
+            color: #79c0ff;
+        }
 
-Wide input voltage range (5–30 V DC)
-Integrated 5 V BEC up to 3 A using an efficient mini step‑down converter.
-Designed for reliability in EDF jets and high‑current scenarios.
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 0 20px 40px 20px;
+        }
 
-🎮 Output Control
+        ul {
+            margin-left: 20px;
+        }
 
-2× Fully‑configurable PWM outputs
-Ideal for servo sequencing (e.g. landing gear + doors).
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #8b949e;
+            border-top: 1px solid #30363d;
+            margin-top: 40px;
+        }
 
-💡 Lighting Control
+        code {
+            background: #161b22;
+            padding: 3px 6px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
 
-3× Configurable LED drivers
-Supports:
+<header>
+    logo.png
+    <h1>JetController</h1>
+    <p>An open‑source smart controller platform for RC planes (ESP32‑C3).</p>
+</header>
 
-Navigation lights
-Blinking/beacon effects
-Landing lights
-Custom user‑defined light modes
+<section>
+    <h2>Overview</h2>
+    <p>
+        JetController is a fully open‑source hardware + firmware platform for RC aircraft,
+        designed around the ESP32‑C3 and packed with advanced PWM, lighting, and
+        high‑power output capabilities. The project includes hardware schematics, PCB layout,
+        firmware developed in Arduino IDE, and 3D‑printable parts.
+    </p>
 
+    <h2>Main Features</h2>
+    <ul>
+        <li><strong>2× PWM Inputs</strong> – fully configurable (throttle, gear, lighting mode, etc.)</li>
+        <li><strong>2× PWM Outputs</strong> – servo control or sequencing</li>
+        <li><strong>3× LED Drivers</strong> – nav lights, beacon, landing lights, custom effects</li>
+        <li><strong>2× High‑Power MOSFET Outputs</strong> – e.g., 7W afterburner LEDs</li>
+        <li><strong>Wide Input Voltage</strong> – 5–30 V DC</li>
+        <li><strong>Integrated BEC</strong> – 5 V @ 3 A</li>
+        <li><strong>ESP32‑C3 Wi‑Fi</strong> – configuration UI (coming soon)</li>
+    </ul>
 
+    <h2>Included in the Repository</h2>
+    <ul>
+        <li>Hardware schematics (PDF + source)</li>
+        <li>PCB layout files</li>
+        <li>Arduino firmware</li>
+        <li>3D‑printed housing models</li>
+        <li>EDF afterburner adapter models</li>
+    </ul>
 
-🔥 High‑Power LED Switching
+    <h2>Bill of Materials (Main Components)</h2>
+    <ul>
+        <li>ESP32‑C3 SuperMini</li>
+        <li>Mini step‑down regulator (5V)</li>
+        <li>AO3401 MOSFETs (×5)</li>
+        <li>Assorted discretes (resistors, capacitors, diodes)</li>
+    </ul>
 
-2× High‑power VBAT‑fed MOSFET switches
-Suitable for:
+    <h2>License</h2>
+    <p>
+        This project is released under <strong>GPL‑3.0</strong>.  
+        All derived work must remain open‑source.
+    </p>
+</section>
 
-7 W afterburner LEDs
-High‑intensity strobes
-Other high‑load accessories
+<div class="footer">
+    JetController – Open Source RC Systems • GPL‑3.0
+</div>
 
-
-
-📡 Connectivity
-
-Wi‑Fi support (ESP32‑C3)
-Planned feature: Web‑based configuration (not yet implemented).
-
-
-🧩 Included in the Repository
-/hardware
-  ├── schematics
-  ├── pcb_layout
-  ├── fabrication files (Gerbers)
-/firmware
-  ├── Arduino IDE source code
-  ├── configuration examples
-/3d_models
-  ├── enclosure (housing)
-  ├── EDF afterburner adapters
-/docs
-  ├── user_guide.md
-  ├── wiring_schemes.md  
-README.md
-LICENSE (GPL-3.0)
-
-
-🛠️ Development & Firmware
-Software
-JetController firmware is written in Arduino-style C++ for the ESP32‑C3 and can be compiled and flashed using:
-
-Arduino IDE
-Board definition: ESP32C3 / ESP32C3 Dev Module
-Flashing via USB‑C or serial adapter (depending on your ESP32C3 SuperMini variant)
-
-Hardware Prototyping
-The project is designed around accessible, low‑cost components to simplify community contributions.
-
-🧾 Bill of Materials (Main Components)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-ComponentDescriptionESP32‑C3 SuperMiniMain MCU, Wi‑Fi capableMini 5 V Step‑Down DC/DCWide input voltage BEC (5–30V → 5V @ 3A)AO3401 (×5)P‑channel MOSFETs for high‑power switching and protectionAssorted discretesResistors, small‑signal MOSFETs, diodes, capacitors, connectors
-
-🚀 Applications
-JetController is suitable for:
-
-EDF jets with functional afterburner lighting
-Scale aircraft with navigation, beacon and landing lights
-Electric retracts and gear‑door sequencing
-Custom lighting effects
-Multi‑channel RC input processing
-
-
-🔮 Roadmap
-
- Web‑based configuration UI (ESP32‑C3 Wi‑Fi)
- Real‑time monitoring dashboard
- Extended LED effect engine
- Preconfigured aircraft profiles
- Step‑by‑step build and wiring tutorials
- Demo videos
-
-
-🤝 Contributing
-This project is licensed under GPL‑3.0, meaning all derived work must remain open and released under the same license.
-Contributions are welcome across:
-
-Hardware design
-Firmware features
-3D printable accessories
-Documentation
-
-Please open an issue or pull request if you'd like to get involved.
-
-📜 License
-This project is distributed under the GNU General Public License v3.0 (GPL‑3.0).
-See the LICENSE file for full details.
+</body>
+</html>
